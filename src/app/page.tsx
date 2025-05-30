@@ -5,6 +5,7 @@ import FilterTags from "./_components/filtertags";
 import ClearFilters from "./_components/clearfilters";
 import GTList from "./_components/gtlist";
 import Pagination from "./_components/pagination";
+import OpenGT from "./_components/opengt";
 
 interface GT {
   gt: string;
@@ -115,6 +116,10 @@ export default function Home() {
             onPageChange={setCurrentPage}
           />
         </>
+      )}
+
+      {isViewing && selectedGT && (
+        <OpenGT selectedGT={selectedGT} onBack={handleBack} />
       )}
     </main>
   );
