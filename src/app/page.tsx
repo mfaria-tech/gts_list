@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Search from "./_components/search";
 import FilterTags from "./_components/filtertags";
+import ClearFilters from "./_components/clearfilters";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -24,6 +25,13 @@ export default function Home() {
               selectedSubgenero={selectedSubgenero}
               onGeneroChange={setSelectedGenero}
               onSubgeneroChange={setSelectedSubgenero}
+            />
+            <ClearFilters
+              onClear={() => {
+                setSearch("");
+                setSelectedGenero(null);
+                setSelectedSubgenero(null);
+              }}
             />
           </div>
         </>
