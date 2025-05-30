@@ -1,9 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 import Search from "./_components/search";
+import FilterTags from "./_components/filtertags";
 
 export default function Home() {
   const [search, setSearch] = useState("");
+  const [selectedGenero, setSelectedGenero] = useState<string | null>(null);
+  const [selectedSubgenero, setSelectedSubgenero] = useState<string | null>(null);
   const [isViewing, setIsViewing] = useState(false);
 
   return (
@@ -14,6 +17,14 @@ export default function Home() {
         <>
           <div className="filters">
             <Search search={search} onSearchChange={setSearch} />
+            <FilterTags
+              generos={[]}
+              subgeneros={[]}
+              selectedGenero={selectedGenero}
+              selectedSubgenero={selectedSubgenero}
+              onGeneroChange={setSelectedGenero}
+              onSubgeneroChange={setSelectedSubgenero}
+            />
           </div>
         </>
       )}
