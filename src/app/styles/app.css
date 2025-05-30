@@ -157,6 +157,50 @@ input.search {
 .tag-color-5 { background-color: #f59083; }
 .tag-color-6 { background-color: #f58383; }
 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: end;
+}
+
+.next-button-pagination,
+.previous-button-pagination {
+  position: relative;
+  background-color: #cdcdcd;
+  cursor: pointer;
+  bottom: 3px;
+  border-radius: 100px;
+  border: 2px solid #343434;
+  box-shadow: 0px 2px #343434;
+}
+
+.previous-button-pagination {
+  rotate: 180deg;
+  box-shadow: 0px -2px #343434;
+}
+
+.next-button-pagination:hover,
+.previous-button-pagination:hover {
+  bottom: 5px;
+  box-shadow: 0px 4px #343434;
+}
+
+.previous-button-pagination:hover {
+  bottom: 5px;
+  box-shadow: 0px -4px #343434;
+}
+
+.next-button-pagination:active,
+.previous-button-pagination:active {
+  bottom: 3px;
+  box-shadow: 0px 2px #343434;
+}
+
+.previous-button-pagination:active {
+  box-shadow: 0px -2px #343434;
+}
+
 /* Ajuste responsivo para mobile 1048px */
 @media (max-width: 1048px) {
   main.main,
