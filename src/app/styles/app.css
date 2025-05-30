@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kode+Mono:wght@400..700&display=swap');
+
+body {
+  width: 100vw;
+  background-color: #f2e4c0;
+}
+
+body * {
+  font-family: 'Kode Mono', monospace;
+}
+
+main.main,
+.main {
+  display: grid;
+  margin: 18px 36px;
+}
+
+/* Ajuste responsivo para mobile 320px */
+@media (max-width: 1048px) {
+  main.main,
+  .main {
+    margin: 9px 12px;
+  }
+}
