@@ -6,8 +6,8 @@ import ClearFilters from "./_components/clearfilters";
 
 export default function Home() {
   const [search, setSearch] = useState("");
-  const [selectedGenero, setSelectedGenero] = useState<string | null>(null);
-  const [selectedSubgenero, setSelectedSubgenero] = useState<string | null>(null);
+  const [selectedGender, setSelectedGender] = useState<string | null>(null);
+  const [selectedSubgenre, setSelectedSubgenre] = useState<string | null>(null);
   const [isViewing, setIsViewing] = useState(false);
 
   return (
@@ -19,18 +19,18 @@ export default function Home() {
           <div className="filters">
             <Search search={search} onSearchChange={setSearch} />
             <FilterTags
-              generos={[]}
-              subgeneros={[]}
-              selectedGenero={selectedGenero}
-              selectedSubgenero={selectedSubgenero}
-              onGeneroChange={setSelectedGenero}
-              onSubgeneroChange={setSelectedSubgenero}
+              genders={[]}
+              subgenres={[]}
+              selectedGender={selectedGender}
+              selectedSubgenre={selectedSubgenre}
+              onGenderChange={setSelectedGender}
+              onSubgenreChange={setSelectedSubgenre}
             />
             <ClearFilters
               onClear={() => {
                 setSearch("");
-                setSelectedGenero(null);
-                setSelectedSubgenero(null);
+                setSelectedGender(null);
+                setSelectedSubgenre(null);
               }}
             />
           </div>

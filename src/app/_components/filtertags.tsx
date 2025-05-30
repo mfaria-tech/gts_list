@@ -2,31 +2,31 @@
 import React from "react";
 
 interface Props {
-  generos: string[];
-  subgeneros: string[];
-  selectedGenero: string | null;
-  selectedSubgenero: string | null;
-  onGeneroChange: (value: string | null) => void;
-  onSubgeneroChange: (value: string | null) => void;
+  genders: string[];
+  subgenres: string[];
+  selectedGender: string | null;
+  selectedSubgenre: string | null;
+  onGenderChange: (value: string | null) => void;
+  onSubgenreChange: (value: string | null) => void;
 }
 
 const FilterTags: React.FC<Props> = ({
-  generos,
-  subgeneros,
-  selectedGenero,
-  selectedSubgenero,
-  onGeneroChange,
-  onSubgeneroChange,
+  genders,
+  subgenres,
+  selectedGender,
+  selectedSubgenre,
+  onGenderChange,
+  onSubgenreChange,
 }) => {
   return (
     <div className="filter-tags">
       <select
-        className="filter-genero"
-        value={selectedGenero ?? ""}
-        onChange={(e) => onGeneroChange(e.target.value || null)}
+        className="filter-gender"
+        value={selectedGender ?? ""}
+        onChange={(e) => onGenderChange(e.target.value || null)}
       >
         <option value="">Todos os Gêneros</option>
-        {generos.map((g) => (
+        {genders.map((g) => (
           <option key={g} value={g}>
             {g}
           </option>
@@ -34,12 +34,12 @@ const FilterTags: React.FC<Props> = ({
       </select>
 
       <select
-        className="filter-subgenero"
-        value={selectedSubgenero ?? ""}
-        onChange={(e) => onSubgeneroChange(e.target.value || null)}
+        className="filter-subgenre"
+        value={selectedSubgenre ?? ""}
+        onChange={(e) => onSubgenreChange(e.target.value || null)}
       >
         <option value="">Todos os Subgêneros</option>
-        {subgeneros.map((sg) => (
+        {subgenres.map((sg) => (
           <option key={sg} value={sg}>
             {sg}
           </option>
