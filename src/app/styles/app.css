@@ -229,7 +229,7 @@ input.search {
 }
 
 .button-back::after {
-  content: "⮲";
+  content: "⮲ Voltar";
   font-size: 28px;
   position: relative;
   bottom: 10px;
