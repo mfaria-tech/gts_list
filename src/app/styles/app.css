@@ -2,6 +2,8 @@
 
 body {
   width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   background-color: #f2e4c0;
 }
 
@@ -11,8 +13,12 @@ body * {
 
 main.main,
 .main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   margin: 18px 36px;
+  width: calc(100vw - 72px);
+  height: calc(100vh - 36px);
+  overflow: hidden;
 }
 
 .filters {
@@ -79,11 +85,14 @@ input.search {
 
 .list-gt {
   display: flex;
-  margin: 15px 28px;
+  padding: 6px 9px;
+  margin-bottom: 12px;
   flex-direction: column;
   gap: 12px;
-  max-width: 980px;
-  width: max-content;
+  width: calc(100vw - 72px);
+  height: 480px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   align-items: center;
   justify-self: center;
 }
@@ -201,10 +210,6 @@ input.search {
   box-shadow: 0px -2px #343434;
 }
 
-/* .label-pagination {
-
-} */
-
 .open-gt {
   display: grid;
   grid-template-rows: auto 480px;
@@ -298,11 +303,31 @@ input.search {
   98%,to {bottom:.1%}
 }
 
-/* Ajuste responsivo para mobile 1048px */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+  border-radius: 100px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #8b8b8b;
+  border-radius: 100px;
+  border: 4px solid #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Ajuste responsivo para resolução inferior a 1048px */
 @media (max-width: 1048px) {
   main.main,
   .main {
     margin: 9px 12px;
+    width: calc(100vw - 24px);
   }
 
   .filters {
@@ -336,7 +361,7 @@ input.search {
   .list-gt {
     margin: 9px;
     gap: 9px;
-    width: 100%;
+    width: calc(100vw - 36px);
   }
   
   .item-gt {
@@ -393,5 +418,13 @@ input.search {
   .button-back {
     width: 100%;
     text-align: center;
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border: 2px solid #f9f9f9;
   }
 }
