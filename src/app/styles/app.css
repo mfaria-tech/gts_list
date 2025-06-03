@@ -179,6 +179,7 @@ input.search {
 .pagination {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: end;
   gap: 12px;
 }
@@ -406,6 +407,23 @@ input.search {
   .gt-gender,
   .gt-subgenre {
     text-align: center;
+    font-size: 10px;
+  }
+
+  .counter-pagination {
+    font-size: 12px;
+    gap: 12px;
+  }
+
+  .pagination {
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    font-size: 10px;
+  }
+  
+  .next-button-pagination,
+  .previous-button-pagination {
+    height: 25px;
     font-size: 10px;
   }
 

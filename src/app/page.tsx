@@ -112,7 +112,7 @@ export default function Home() {
           <GTList gts={paginatedGts} onSelect={handleSelectGT} />
           <div className="counter-pagination">
             <p className="counter-records">
-              Total de registros encontrados: {filteredGts.length}
+              Total: {filteredGts.length}
             </p>
             <Pagination
               currentPage={currentPage}
