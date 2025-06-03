@@ -53,7 +53,7 @@ input.search {
 }
 
 .filter-tags > select {
-  height: 24px;
+  height: 28px;
   border-radius: 100px;
   padding: 3px 21px;
   cursor: pointer;
@@ -90,7 +90,7 @@ input.search {
   flex-direction: column;
   gap: 12px;
   width: calc(100vw - 72px);
-  height: 480px;
+  height: max-content;
   overflow-y: scroll;
   overflow-x: hidden;
   align-items: center;
@@ -334,10 +334,15 @@ input.search {
 
 /* Ajuste responsivo para resolução inferior a 1048px */
 @media (max-width: 1048px) {
+  body {
+    overflow-y: visible;
+  }
+
   main.main,
   .main {
     margin: 9px 12px;
     width: calc(100vw - 24px);
+    height: max-content;
   }
 
   .filters {
@@ -353,6 +358,7 @@ input.search {
     max-width: 100%;
     min-width: 100%;
     font-size: 14px;
+    margin: 0;
   }
   
   .filter-tags {
@@ -372,6 +378,7 @@ input.search {
     margin: 9px;
     gap: 9px;
     width: calc(100vw - 36px);
+    overflow: visible;
   }
   
   .item-gt {
