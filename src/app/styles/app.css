@@ -166,11 +166,21 @@ input.search {
 .tag-color-5 { background-color: #f59083; }
 .tag-color-6 { background-color: #f58383; }
 
+.counter-pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 18px 12px;
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
-  gap: 12px;
   justify-content: end;
+  gap: 12px;
 }
 
 .next-button-pagination,
